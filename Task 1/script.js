@@ -8,3 +8,15 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+function convertWeight(weight) {
+  const weightLb = weight * 2.2046;
+  const weightG = weight / 0.001;
+  const weightOz = weight * 35.274;
+}
+
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const weightKg = document.getElementById("search").value;
+  convertWeight(weightKg);
+});
